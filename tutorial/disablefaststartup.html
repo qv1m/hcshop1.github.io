@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HC-SHOP - Windows 10で高速スタートアップを無効にする方法</title>
+		<link rel="icon" href="https://qv1m-pro.github.io/hcshop.github.io/favicon.ico">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="https://qv1m-pro.github.io/hcshop.github.io/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div onCopy="alert('転載防止の為、HC-SHOP内コンテンツのコピーは禁じられています。'); return false;">
+			<div id="wrapper">
+
+				<!--START-->
+
+					<section id="header">
+
+						<a href="https://hc-shop.fun/" class="logo"><strong>HC-SHOP</strong> by はらたん_hc.shop#9584</a>
+
+							<nav id="nav">
+								<ul>
+									<li><a href="https://hc-shop.fun/">Home</a></li>
+									<li>
+										<a href="#" class="icon solid fa-angle-down">PRODUCT</a>
+										<ul>
+											<li><a href="https://hc-shop.fun/apexlegends">APEX</a></li>
+											<li><a href="https://hc-shop.fun/spoofer">SPOOFER</a></li>
+											<li><a href="https://hc-shop.fun/accounts">ACCOUNT</a></li>
+											<li><a href="https://hc-shop.fun/tools">TOOLS</a></li>
+											<li>
+												<a href="#">OTHER</a>
+												<ul>
+													<li><a href="https://hc-shop.fun/hc-bot">HC-BOT</a></li>
+													<li><a href="https://hc-shop.fun/staff">STAFF</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="https://hc-shop.fun/password">PASSWORD</a></li>
+									<li class="current"><a href="https://hc-shop.fun/tutorial">TUTORIAL</a></li>
+									<li><a href="https://hc-shop.fun/discord">DISCORD</a></li>
+								</ul>
+							</nav>
+					</section>
+
+				<!--END-->
+
+					<section id="banner">
+						<div class="content">
+							<header class="major special">
+								<h1>H C - S H O P<br />
+                                    Windows 10で高速スタートアップを無効にする方法</h1>
+							</header>
+						</div>
+					</section>
+
+					<section class="wrapper style1" id="first">
+						<div class="inner">
+							<header class="major special">
+								<h2>高速スタートアップを無効/有効にする方法</h2>
+								<p>Windows 10でハイブリッド・ブートまたは高速スタートアップを有効/無効を切り替えるには以下で紹介する2つの方法があります。<br />
+                                    どちらでも可能ですが、1つはBATファイルを用いた変更方法であるため、自己責任でお願いします。</p>
+							</header>
+							<H3>■ 方法1. システム設定でオフまたはオンにする</H3>
+                            <div class="row">
+                                <div class="col-6 col-12">
+                                    <ol>
+                                        <li>コントロールパネルを開き電源オプションをクリックする。（表示方法は大きいアイコン）</li><br>
+                                        <li>「電源ボタンの動作を選択する」をクリックする。</li><br>
+                                        <img style="max-width: 100%; height: auto;" src="../images/disablefaststartup1.png"></img><br>
+                                        <li>「現在利用可能ではない設定を変更します」をクリックする。</li><br>
+                                        <img style="max-width: 100%; height: auto;" src="../images/disablefaststartup2.jpg"></img><br>
+                                        <li>下へスクロールし、シャットダウン設定の項目にある「高速スタートアップを有効にする」のチェックボックスを外し、変更の保存をクリックする。</li><br>
+                                        <img style="max-width: 100%; height: auto;" src="../images/disablefaststartup3.jpg"></img><br>
+                                        <p> 高速スタートアップを有効にする項目が表示されていない場合は、一度システム設定ウィンドウを閉じる必要がある。その後休止状態を有効にした後、再びステップ1からやり直す必要がある。</p>
+                                    </ol>
+                                </div>
+                            </div>
+                            <br><hr>
+                            <H3>■ 方法2. BATファイルを使用してオフまたはオンにする</H3>
+                            <p>BATファイルを使用して高速スタートアップを無効にすることもできる。以下のボタンからBATファイルをダウンロードして管理者として実行するだけで簡単に変更を行うことが出来る。</p>
+                            <ul class="actions fit">
+                                <li><a href="./../freefile/disablefaststartup.bat" class="button primary fit" download>無効にする場合</a></li>
+                                <li><a href="./../freefile/enablefaststartup.bat" class="button fit" download>有効にする場合</a></li>
+                            </ul><p>上記のファイルは右クリックし管理者として実行しなければ適用されないので注意が必要だ。</p><hr><br>
+                            <H3>■ 方法3. レジストリに変更を加えて手動でオンまたはオフにする</H3>
+                            <p>また上記のダウンロードして変更する内容は手動で行うこともできる。<br> スタートメニューから「regedit」と入力しレジストリエディターを開き、以下の場所に移動する。</p>
+                            <br><p><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\PowerHiberbootEnabled</code></p><br>
+                            <p><b>PowerHiberbootEnabled</b>という名前で追加または変更する。種類はDWORD、値は0で高速スタートアップが無効、1で有効となる。</p>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon alt brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://hc-shop.fun/discord" class="icon alt brands fa-discord"><span class="label">Discord</span></a></li>
+							<li><a href="#" class="icon alt brands fa-tiktok"><span class="label">TikTok</span></a></li>
+							<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">
+							&copy; HC-SHOP 2023 All rights reserved.
+						</p>
+					</section>
+
+			</div>
+		</div>
+		<!-- Scripts -->
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.dropotron.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.scrollex.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.scrolly.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/browser.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/breakpoints.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/util.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/main.js"></script>
+
+	</body>
+</html>

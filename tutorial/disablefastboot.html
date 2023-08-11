@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>HC-SHOP - UEFI の Fast Boot を無効にする手順</title>
+		<link rel="icon" href="https://qv1m-pro.github.io/hcshop.github.io/favicon.ico">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="https://qv1m-pro.github.io/hcshop.github.io/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div onCopy="alert('転載防止の為、HC-SHOP内コンテンツのコピーは禁じられています。'); return false;">
+			<div id="wrapper">
+
+				<!--START-->
+
+					<section id="header">
+
+						<a href="https://hc-shop.fun/" class="logo"><strong>HC-SHOP</strong> by はらたん_hc.shop#9584</a>
+
+							<nav id="nav">
+								<ul>
+									<li><a href="https://hc-shop.fun/">Home</a></li>
+									<li>
+										<a href="#" class="icon solid fa-angle-down">PRODUCT</a>
+										<ul>
+											<li><a href="https://hc-shop.fun/apexlegends">APEX</a></li>
+											<li><a href="https://hc-shop.fun/spoofer">SPOOFER</a></li>
+											<li><a href="https://hc-shop.fun/accounts">ACCOUNT</a></li>
+											<li><a href="https://hc-shop.fun/tools">TOOLS</a></li>
+											<li>
+												<a href="#">OTHER</a>
+												<ul>
+													<li><a href="https://hc-shop.fun/hc-bot">HC-BOT</a></li>
+													<li><a href="https://hc-shop.fun/staff">STAFF</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li><a href="https://hc-shop.fun/password">PASSWORD</a></li>
+									<li class="current"><a href="https://hc-shop.fun/tutorial">TUTORIAL</a></li>
+									<li><a href="https://hc-shop.fun/discord">DISCORD</a></li>
+								</ul>
+							</nav>
+					</section>
+
+				<!--END-->
+
+					<section id="banner">
+						<div class="content">
+							<header class="major special">
+								<h1>H C - S H O P<br />
+                                    UEFI の Fast Boot を無効にする手順</h1>
+							</header>
+						</div>
+					</section>
+
+					<section class="wrapper style1" id="first">
+						<div class="inner">
+							<header class="major special">
+								<h2>Fast Bootについて</h2>
+								<p>※手順だけ知りたい場合は読み飛ばしてOKです。 </p>
+							</header>
+							<H3>■ 機能</H3><p>PCの電源を入れた時や、Windows を再起動した際に、BIOSレベルのドライバ初期化を最小限にとどめ、PC起動時のPOST通過にかかる時間を短縮する機能です。</p>
+                            <h3>■ 作動条件</h3><p>Fast Boot の機能は、Windows が UEFI (GPT) 形式でインストールされていなければ有効に作動しません。<br>Windows を UEFI (GPT)形式でインストールするには、一部のメーカー製PCを除き、64bit版のOSが必要。</p>
+                            <H3>■ 対応OS</H3><p>Fast Bootの機能を十分に発揮させるためには、Windows 8 以降を使う必要があります。Windows 7 マシンの場合でも、Fast Boot は 作動しますが、Windows 8 以降ほど早くはなりません。<br> (Windows8 以降を使うと、UEFI の専用領域を利用してさらに高速な起動ができる。)</p>
+                            <p>※さらに詳しいお話はググってください。</p>
+                            <hr>
+                            <header class="major special">
+								<h2>Windows 10/8.1 で UEFI画面に入る方法</h2>
+								<p>Fast Boot を 無効にするには、PCのUEFI画面に入る必要があります。<br>UEFI 画面に入るには、通常は以下の手順が必要になります。</p>
+							</header>
+                            <blockquote>補足説明<br>● 最近のPCは、PC 起動時に F2またはDELキー でUEFI 画面に入れないようになっています。<br>● F2またはDELキー でUEFI 画面に入れるPCの場合、以下の手順は不要です。<br>● また、以下の手順で FastBoot の設定を無効化した後は、F2またはDELキー でUEFI 画面に入れるようになります。</blockquote>
+                            <h3>■ まずはWindowsを起動した状態で操作します。</h3>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot1.png"></img><br>
+                            <p>1.「スタートボタン」を押す<br>2.「設定ボタン」を押す<br>3.「更新とセキュリティ」を押す</p>
+                            <h3>■ 次に出た画面で、以下の操作を行います</h3>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot2.jpg"></img><br>
+                            <p>4. 左側のメニューで「回復」を選択<br>5.「PCの起動をカスタマイズする」の「今すぐPCを再起動する」</p>
+                            <p>ここまでの手順を行うと、PCが再起動されます。<br>Fast Boot の無効化は、PC再起動後のUEFI画面で実行します。</p>
+                            <h3>■ 再起動後の手順</h3>
+                            <p>● 「オプションの選択」画面が表示されます。</p>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot3.png"></img>
+                            <p>「トラブルシューティング」を選択します。</p><br>
+                            <p>● 「トラブルシューティング」画面</p>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot4.png"></img>
+                            <p>「詳細オプション」を選びます。</p><br>
+                            <p>● 「詳細オプション」画面</p>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot5.jpg"></img>
+                            <p>「UEFI ファームウェアの設定」を選びます。</p><br>
+                            <p>以上の手順でPCが再起動され、UEFI画面が表示されます。</p>
+                            <p>※画像は ASUS P9X79 Deluxe の UEFI画面。</p>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot6.jpg"></img>
+                            <p> ※UEFI画面はマザーボードのメーカによって異なります。</p>
+                            <p>UEFI画面が表示された後は、Fast Bootの項目を探して現在の状態をチェックし、必要に応じ設定を変更します。具体的な手順は、以下になります。</p><hr>
+
+                            <header class="major special">
+								<h2>FAST Boot を無効化する／状態をチェックする</h2>
+								<p>FAST Boot の設定は、通常は UEFI画面の「Boot」タブ内で確認できます。<br> 以下、3つほど設定例を示しておきます。</p>
+							</header>
+                            <h3>■ ASUSマザーの場合 ※ASUS P9X79 Deluxe</h3>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot7.png"></img>
+                            <p>1. 「Boot」タブを選択<br>2. Fast Boot････Disabledにする</p>
+                            <blockquote>※補足<br>この項目Enabled にしていても、「USB Support」や「PS2 Device Support」を「Disabled」にしていればPOST時のキー入力は受け付け可能。</blockquote><br>
+                            <h3>■ AsRockマザーの場合 ※AsRock Fatal1ty Z87 Killer</h3>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot8.jpg"></img>
+                            <p>1. 「Boot」タブを選択<br>2. Fast Boot････DisabledまたはFast bootを選択する<br>※Ultra Fast Boot 以外はPOST時キー入力可能</p><br>
+                            <h3>■ メーカー製PCの一例 ※FMVW77MWG (intel HM86 Express)</h3>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot9.jpg"></img>
+                            <p>1. 「詳細」タブを選択<br>2. 高速起動････使用しないを選択<br>※マウス操作不能。キーボード操作のみ。</p><br>
+                            <h3>■ 重要:設定変更のUEFIの終了方法</h3>
+                            <p>上記の設定が終了した後は、<u>設定を保存</u>したうえでPCを再起動します。</p>
+                            <p>※以下画面はASUS P9X79 Deluxeのもの。</p>
+                            <img style="max-width: 100%; height: auto;" src="../images/disablefastboot10.png"></img>
+                            <p> 「Exit」または「終了」タブに移動し、「Save & Exit」や「Save Changes and Reset」などを選びます。<br> PCが再起動され、設定変更が反映されます。</p><hr>
+                            <header class="major special">
+								<h2>注意事項</h2>
+								<p>このページの手順とは逆に、Fast Bootを無効から有効にしたい場合は注意が必要です。<br> Fast Bootを有効にする場合、以下の条件を満たしておく必要があります。</p>
+							</header>
+                            <li>Windows は UEFI(GPT)形式でインストールされている</li>
+                            <li>USB機器も含め、内蔵パーツや周辺機器はすべてUEFIに対応している必要がある</li>
+                            <li>UEFIのCSM設定は「無効」になっている必要がある</li><hr>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon alt brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://hc-shop.fun/discord" class="icon alt brands fa-discord"><span class="label">Discord</span></a></li>
+							<li><a href="#" class="icon alt brands fa-tiktok"><span class="label">TikTok</span></a></li>
+							<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">
+							&copy; HC-SHOP 2023 All rights reserved.
+						</p>
+					</section>
+
+			</div>
+		</div>
+		<!-- Scripts -->
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.dropotron.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.scrollex.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/jquery.scrolly.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/browser.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/breakpoints.min.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/util.js"></script>
+			<script src="https://qv1m-pro.github.io/hcshop.github.io/assets/js/main.js"></script>
+
+	</body>
+</html>
